@@ -7,7 +7,7 @@ export class HomeserviceService {
   apikey = 'AIzaSyD7D8SVNUYYrfT4cFDfBs1clpkSlpP-_Ys';
   constructor(private _homehttp:HttpClient) { }
   getHomeData=()=>{
-    return this._homehttp.get('/proxy/playlists?part=snippet%2CcontentDetails&channelId=UC_x5XG1OV2P6uZZ5FSM9Ttw&maxResults=1000&key='+this.apikey);
+    return this._homehttp.get('https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2CcontentDetails&channelId=UC_x5XG1OV2P6uZZ5FSM9Ttw&maxResults=1000&key='+this.apikey);
     
   }
   getsearch = (data:any) =>{
